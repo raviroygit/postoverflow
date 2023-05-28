@@ -6,16 +6,6 @@ import { connectToDB } from '@utils/database';
 
 const handler = NextAuth({
   site: process.env.NEXTAUTH_URL,
-  cookies: {
-    callbackUrl: {
-      name: '__Secure-next-auth.callback-url',
-      options: {
-        sameSite: 'lax',
-        path: process.env.NEXTAUTH_URL,
-        secure: true
-      }
-    }
-  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
