@@ -11,7 +11,7 @@ const handler = NextAuth({
       name: '__Secure-next-auth.callback-url',
       options: {
         sameSite: 'lax',
-        path: 'http://localhost:3000/',
+        path: process.env.NEXTAUTH_URL,
         secure: true
       }
     }
